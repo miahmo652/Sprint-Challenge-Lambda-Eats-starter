@@ -13,8 +13,16 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
+
+       useRouteMatch hook is gives you access to its match data.
+
 2. How would you explain form validation to someone who has never programmed before?
+
+     Form validation is when you tell the users, items  they are required to fill out and what type of info you'd have to type. A way to do that is by using the yup library, to handle the validations for us. We declare a schema which is what the form looks like then we validate it using yup.
+
 3. In 1-2 sentences, define end to end testing.
+
+    end to end testing is when the UI copys how a user might interact with the ap
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section **will** prevent you from passing this challenge.
 
