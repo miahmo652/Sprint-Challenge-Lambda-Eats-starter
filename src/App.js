@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import {Route, Link} from "react-router-dom";
+
 import Pizza from './components/Pizza.js'
 import Customers from './components/Customers.js'
-
+import Home from './components/Home.js'
 const App = () => {
   const [customer, setcustomer]=useState([])
   const person = (object)=>{
@@ -10,17 +11,22 @@ const App = () => {
   }
   
   return (
-     <div>
+     <div className="Contain">
+       <div className="nav">
       <h1>Lambda's Pizzaria</h1>
-      <button>Home</button>
-      <button>Pizza </button>
-      
-     
+      <div className="navbar">
+      <Link to="/">Home</Link>
+      <Link to="/pizza">Order Pizza</Link>
+      </div>
+      </div>
+      <Route exact path="/" component={Home}/>
 
-  
+      <Route path="/pizza">
       <Pizza people={person}/>
-
       <Customers client={customer}/>
+      </Route>
+
+      
       </div>
   );
 };

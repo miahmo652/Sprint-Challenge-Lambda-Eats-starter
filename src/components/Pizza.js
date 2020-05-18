@@ -46,24 +46,12 @@ export default function Pizza(props){
         pepper:"",
         special: ""
     })
-    const [click, setclick]=useState({
-        name:"",
-        size: "",
-        red: "",
-        garlic: "",
-        bbq: "",
-        spinach:"",
-        pepperoni:"",
-        chicken:"",
-        pineapple:"",
-        pepper:"",
-        special: ""
-    })
+  
 
     const inputclick = e =>{
         e.persist()
         let value = e.target.type === "checkbox" ? e.target.checked : e.target.value
-        setFormState({...formState, [e.target.name]:e.target.name});
+        setFormState({...formState, [e.target.name]:e.target.value});
         }
     
     const validate =(e) => { 
@@ -115,6 +103,7 @@ export default function Pizza(props){
             <label htmlFor="size">
                <h4> Choice of size</h4>
                 <select value={formState.size} name="size" onChange={inputchange}>
+                    <option value=" ">Choose size</option>
                     <option value="Small">Small</option>
                     <option value="Medium">Medium</option>
                     <option value="Large">Large</option>
@@ -129,8 +118,9 @@ export default function Pizza(props){
             <input
           type="checkbox"
           name="red"
+          value="Original red"
           checked={formState.red}
-          onClick={inputclick}
+          onChange={inputclick}
         />
         Original red
             </label>
@@ -138,8 +128,9 @@ export default function Pizza(props){
             <input
           type="checkbox"
           name="garlic"
+          value="Garlic Ranch"
           checked={formState.garlic}
-          onClick={inputclick}
+          onChange={inputclick}
         />
         Garlic Ranch
              </label>
@@ -147,8 +138,9 @@ export default function Pizza(props){
             <input
           type="checkbox"
           name="bbq"
+          value="BBQ Sauce"
           checked={formState.bbq}
-          onClick={inputclick}
+          onChange={inputclick}
         />
         BBQ Sauce
              </label>
@@ -156,8 +148,9 @@ export default function Pizza(props){
             <input
           type="checkbox"
           name="spinach"
+          value="Spinach alfredo"
           checked={formState.spinach}
-          onClick={inputclick}
+          onChange={inputclick}
         />
         Spinach Alfredo
              </label>
@@ -168,8 +161,9 @@ export default function Pizza(props){
         <input
           type="checkbox"
           name="pepperoni"
+          value="Pepperoni"
           checked={formState.pepperoni}
-          onClick={inputclick}
+          onChange={inputclick}
         />
         Pepperoni
     </label>
@@ -177,8 +171,9 @@ export default function Pizza(props){
             <input
           type="checkbox"
           name="chicken"
+          value="Chicken"
           checked={formState.chicken}
-          onClick={inputclick}
+          onChange={inputclick}
         />
         Chicken
     </label>
@@ -186,8 +181,9 @@ export default function Pizza(props){
             <input
           type="checkbox"
           name="pineapple"
+          value="Pineapple"
           checked={formState.pineapple}
-          onClick={inputclick}
+          onChange={inputclick}
         />
         Pineapple
     </label>
@@ -195,8 +191,9 @@ export default function Pizza(props){
             <input
           type="checkbox"
           name="pepper"
+          value="Green pepper"
           checked={formState.pepper}
-          onClick={inputclick}
+          onChange={inputclick}
         />
         Green Pepper
     </label>

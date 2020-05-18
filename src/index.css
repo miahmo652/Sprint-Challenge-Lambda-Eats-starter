@@ -11,3 +11,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.nav{
+  display:flex;
+  justify-content: space-between;
+  background-color: royalblue;
+  
+}
+.home-image{
+  margin-left: 80px;
+}
+img{
+  width: 90%;
+  height: 80%;
+  object-fit: contain; 
+}
+.navbar a {
+  background-color: rgb(87, 172, 206);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 40px;
+  
+ 
+}
+.navbar a:hover{
+  transform: scale(1.1);
+  transition: all ease 500ms
+}
+.navbar{
+margin-top: 20px;
+
+
+}
+
+.choices{
+
+  background-color: rgb(210, 152, 236);
+  display: flex;
+  flex-wrap:wrap;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.92), 0 5px 2px rgba(0, 0, 0, 0.24);
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  margin: 15px auto;
+}
