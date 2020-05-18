@@ -24,7 +24,7 @@ code {
 img{
   width: 90%;
   height: 80%;
-  object-fit: contain; 
+  
 }
 .navbar a {
   background-color: rgb(87, 172, 206);
@@ -60,3 +60,4 @@ margin-top: 20px;
   padding: 10px;
   margin: 15px auto;
 }
+
